@@ -1,0 +1,22 @@
+The JF Programming Language
+===========================
+
+A programming language built from scratch with modern semantics hopefully.
+The two letters come from my and my gf's names respectively :) jf has a
+runtime that is also called the stack-based VM and it looks like as follows:
+
++-------------------------------------+
+|            runtime (heap)           |
+| +---------+ +---------+ +---------+ |
+| | context | | context | | context | |
+| | (stack) | | (stack) | | (stack) | |
+| +---------+ +---------+ +---------+ |
++-------------------------------------+
+
+Each runtime has more than one contexts and each context has its own stack
+for function calls and local variables. The runtime also maintains a global
+heap space for objects allocated out of stacks and does garbage collection.
+
+Contexts are scheduled by the runtime to execute bytecodes concurrently.
+
+MIT licensed.
