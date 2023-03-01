@@ -1,7 +1,18 @@
 #include <string.h>
 
-#include "jf.h"
 #include "list.h"
+#include "jf.h"
+
+struct jf_function {};
+
+struct jf_cfunction {};
+
+struct jf_string {
+  struct jf_string *next;
+  uint32_t hash;
+  size_t len;
+  char buf[1];
+};
 
 struct jf_value {
   int tag;
@@ -17,17 +28,6 @@ struct jf_value {
       } u;
     } *obj;
   } u;
-};
-
-struct jf_function {};
-
-struct jf_cfunction {};
-
-struct jf_string {
-  struct jf_string *next;
-  uint32_t hash;
-  size_t len;
-  char buf[1];
 };
 
 struct table {

@@ -43,6 +43,10 @@ extern "C" {
 #define JF_STACK 64
 #endif
 
+typedef struct jf_runtime jf_runtime;
+typedef struct jf_context jf_context;
+typedef struct jf_value jf_value;
+
 #ifdef __cplusplus
 }
 #endif
